@@ -1,0 +1,9 @@
+.App {
+  margin: 16px 0;
+}
+
+.MuiCard-root{
+  cursor: pointer;
+  flex-grow: 1 !important;
+  flex-shrink: 1 !important;
+}
