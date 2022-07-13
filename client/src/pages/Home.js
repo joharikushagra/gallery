@@ -10,7 +10,7 @@ import axios from "axios";
 function Home() {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:8000/").then((res) => {
+    axios.get(process.env.REACT_APP_BACKEND_DEV_URI).then((res) => {
       console.log({ res });
       setImages(res?.data?.images);
     });

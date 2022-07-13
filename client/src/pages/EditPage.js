@@ -38,7 +38,7 @@ export default function Edit() {
       details: data.get("details"),
     };
     axios
-      .put(`http://localhost:8000/${id}/edit`, payload)
+      .put(`${process.env.REACT_APP_BACKEND_DEV_URI}/${id}/edit`, payload)
       .then(() => alert("Yay, Image Edited"))
       .finally(() => window.location.replace("/"));
   };

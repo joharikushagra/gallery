@@ -19,7 +19,9 @@ function ShowPage() {
   const handleDelete = async () => {
     if (window.confirm("Image would be deleted")) {
       try {
-        await axios.delete(`http://localhost:8000/delete/${id}`);
+        await axios.delete(
+          `${process.env.REACT_APP_BACKEND_DEV_URI}/delete/${id}`
+        );
         window.location.replace("/");
       } catch (error) {
         alert("Something went wrong");

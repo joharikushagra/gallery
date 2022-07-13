@@ -22,7 +22,7 @@ export default function CreateForm() {
       details: data.get("details"),
     };
     axios
-      .post("http://localhost:8000", payload)
+      .post(process.env.REACT_APP_BACKEND_DEV_URI, payload)
       .then(() => alert("Yay, Image Added"))
       .finally(() => window.location.replace("/"));
   };
