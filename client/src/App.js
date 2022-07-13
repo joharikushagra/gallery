@@ -11,10 +11,10 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" index element={<Home />} />
-          <Route path="/new" index element={<CreateForm />} />
-          <Route path="/:id/edit" index element={<EditPage />} />
-          <Route path="/show/:id" index element={<ShowPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/new" element={<CreateForm />} />
+          <Route path="/:id/edit" element={<EditPage />} />
+          <Route path="/show/:id" element={<ShowPage />} />
         </Routes>
       </div>
     </Router>
