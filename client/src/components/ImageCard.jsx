@@ -1,19 +1,13 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-export default function ImageCard({ id, title, url, details }) {
+export default function ImageCard({ id, title, url, details, onClick }) {
   return (
-    <Card sx={{ maxWidth: 450 }}>
+    <Card sx={{ maxWidth: 450 }} onClick={onClick}>
       <CardMedia
         component="img"
         height="240"
         width="300"
-        // image="https://images.unsplash.com/photo-1657690117381-ca96536fb62c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
         image={url}
         alt="green iguana"
       />
@@ -25,11 +19,6 @@ export default function ImageCard({ id, title, url, details }) {
           {details}
         </Typography>
       </CardContent>
-      {/* <CardActions>
-        <Button size="small" href={`/${id}/edit`}>
-          Edit
-        </Button>
-      </CardActions> */}
     </Card>
   );
 }

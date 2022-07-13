@@ -2,7 +2,6 @@ const ImageModel = require("../models/imageModel");
 
 exports.getAllImages = async (req, res) => {
   const images = await ImageModel.find();
-  console.log({ images });
   return res.send({ images });
 };
 
@@ -24,7 +23,6 @@ exports.editSingelImage = async (req, res) => {
   ImageModel.findByIdAndUpdate(id, { url, details }, (err, doc) => {
     if (err) console.log(err.message);
   });
-  console.log({ editImage: "editImage" });
   return res.status(200).json({ msg: "Image edited successfully" });
 };
 

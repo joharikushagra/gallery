@@ -50,6 +50,7 @@ function Home() {
               title={im.title}
               url={im.url}
               details={im.details}
+              onClick={() => window.location.replace(`/show/${im._id}`)}
             />
           </Grid>
         ))}

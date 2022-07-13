@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import CreateForm from "./pages/CreateForm";
 import EditPage from "./pages/EditPage";
 import "./App.css";
+import ShowPage from "./pages/ShowPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" index element={<Home />} />
           <Route path="/new" index element={<CreateForm />} />
           <Route path="/:id/edit" index element={<EditPage />} />
+          <Route path="/show/:id" index element={<ShowPage />} />
         </Routes>
       </div>
     </Router>
