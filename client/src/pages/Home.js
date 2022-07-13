@@ -10,6 +10,7 @@ import axios from "axios";
 function Home() {
   const [images, setImages] = useState([]);
   useEffect(() => {
+    // axios.get("https://gallery-hackerearth-react.herokuapp.com");
     axios.get(process.env.REACT_APP_BACKEND_DEV_URI).then((res) => {
       console.log({ res });
       setImages(res?.data?.images);
@@ -28,13 +29,13 @@ function Home() {
         </Button>
       </Typography>
       <br />
-      {!images.length && (
+      {!images?.length && (
         <Typography align="center" variant="h4" gutterBottom component="div">
           Loading....
         </Typography>
       )}
       <Grid container spacing={2}>
-        {images.map((im) => (
+        {images?.map((im) => (
           <Grid
             key={im._id}
             item
