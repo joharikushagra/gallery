@@ -17,7 +17,8 @@ mongoose
   })
   .catch((err) => console.log(err.message));
 
-app.use("/", routes);
+app.get("/", (req, res) => res.send("Hello"));
+// app.use("/", routes);
 
 app.listen(8000, () => {
   console.log("Server started at port 8000");
